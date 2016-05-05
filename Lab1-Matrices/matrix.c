@@ -46,14 +46,14 @@ void matrix_add(Matrix m1, Matrix m2, Matrix result, int num_rows, int num_colum
 
 Matrix matrix_transpose(Matrix matrix, int num_rows, int num_columns)
 {
-	Matrix m = matrix_create(num_rows, num_columns);
+	Matrix m = matrix_create(num_columns, num_rows);
 	int i, j;
 	for ( i = 0; i < num_rows; i++)
 	{
 
 		for ( j = 0; j < num_columns; j++)
 		{
-			m[i][j] = matrix[j][i];
+			m[j][i] = matrix[i][j];
 		}
 
 	}
